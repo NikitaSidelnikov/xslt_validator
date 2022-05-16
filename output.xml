@@ -1,0 +1,20 @@
+<validation_proc xmlns="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:sch="http://www.w3.org/2001/XMLSchema"
+                  xmlns:ДМ="urn:Д002:П001:РаботаСПоручением:v0.0.1"
+                  xmlns:ДОК="urn:Д001:Делопроизводство:v0.0.1"
+                  xmlns:СП1="urn:Д001:С001:ВидыДокументов:v1.0.0"
+                  xmlns:ТМ="urn:Д000:ТрансграничнаяМодель:v0.0.1">
+   <message>--Обрабатывается нода - node</message>
+   <message>Обнаружен недопустимый атрибут для данной ноды - schemaLocation</message>
+   <message>---Проверяется аттрибут - УУИД</message>
+   <message>---Проверяется аттрибут - Число</message>
+   <message>---Проверяем дочерний элемент child</message>
+   <message>---Проверяем дочерний элемент child2</message>
+   <node>
+      <message>--Обрабатывается нода - child</message>
+      <message>Паттерн не верный</message>
+   </node>
+   <node>
+      <message>--Обрабатывается нода - child2</message>
+   </node>
+</validation_proc>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Домен мета модели-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="schema" 
+xmlns:sch="schema" elementFormDefault="qualified" attributeFormDefault="qualified">
+<element name="node" type="sch:ТипСтрока"/>
+  <!--ПРОСТЫЕ ТИПЫ-->
+  <!--Универсальный уникальный идентификатор (UUID)-->
+  <simpleType name="ТипУУИД">
+    <restriction base="normalizedString">
+      <pattern value="[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}" />
+    </restriction>
+  </simpleType>
+  <!--Строка-->
+  <simpleType name="ТипСтрока">
+    <restriction base="normalizedString">
+      <minLength value="0" />
+      <maxLength value="1024" />
+    </restriction>
+  </simpleType>
+  <!--Имя файла-->
+  <simpleType name="ТипИмяФайла">
+    <restriction base="normalizedString">
+      <minLength value="1" />
+      <maxLength value="255" />
+      <pattern value="[a-zA-Z0-9_.]{1,250}.[a-zA-Z0-9_]{3,4}" />
+    </restriction>
+  </simpleType>
+  <!--Дата (московское время)-->
+  <simpleType name="ТипДата">
+    <restriction base="date">
+      <pattern value="\d{4}-\d{2}-\d{2}" />
+      <minInclusive value="1900-01-01" />
+    </restriction>
+  </simpleType>
+  <!--Дата и время-->
+  <simpleType name="ТипДатаВремя">
+    <restriction base="dateTime">
+      <pattern value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+|-]\d{2}:\d{2}" />
+      <minInclusive value="1900-01-01T00:00:00" />
+    </restriction>
+  </simpleType>
+  <!--Целое число-->
+  <simpleType name="ТипЦелоеЧисло">
+    <restriction base="integer">
+      <minInclusive value="-999999999" />
+      <maxInclusive value="999999999" />
+    </restriction>
+  </simpleType>
+  <!--Натуральное число-->
+  <simpleType name="ТипНатуральноеЧисло">
+    <restriction base="positiveInteger">
+      <maxInclusive value="999999999" />
+    </restriction>
+  </simpleType>
+  <!--СЛОЖНЫЕ ТИПЫ-->
+  <!--Организация
+  <complexType name="ТипОрганизация">
+    <sequence>
+      <element name="Наименование" type="sch:ТипСтрока" />
+    </sequence>
+    <attribute name="УУИД" type="sch:ТипУУИД" use="required" />
+  </complexType>-->
+</schema>

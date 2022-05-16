@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<node xmlns="schema" xsi:schemaLocation="schema schema.xsd" p2:Число="99" p2:УУИД="0bb0de02-1043-f1d9-2801-599c3e673cc5" xmlns:p2="schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <child>2000--01-01</child>
+  <child2>string2</child2>
+</node>
